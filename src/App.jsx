@@ -53,7 +53,7 @@ function App() {
       setError(null);
 
       // call to express server stored as proxy in package.json file.
-      await fetch(`/api/?media=${media}&term=${termValue}`)
+      await fetch(`https://itunes-app-api.onrender.com/api/?media=${media}&term=${termValue}`)
         .then((response) => {
           if (!response.ok) {
             throw Error("Something went wrong!");
